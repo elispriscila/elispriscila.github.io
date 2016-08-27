@@ -2097,7 +2097,7 @@
 			-ms-transition: opacity 0.25s ease-in-out;
 			transition: opacity 0.25s ease-in-out;
 			background-image: url("images/overlay.png");
-			content: '';
+			//content: '';
 			display: block;
 			height: 100%;
 			left: 0;
@@ -2419,7 +2419,7 @@
 
 		.feature:after {
 			clear: both;
-			content: '';
+			//content: '';
 			display: block;
 		}
 
@@ -2435,6 +2435,11 @@
 			width: 50%;
 		}
 
+		.feature iframe {
+			height: 100%;
+			width: 100%;
+		}
+
 			.feature .image img {
 				display: block;
 				min-height: 100%;
@@ -2442,13 +2447,13 @@
 				position: absolute;
 			}
 
-		.feature:before {
+		/*.feature:before {
 			background: blue;
 			content: '';
 			display: inline-block;
 			height: 100%;
 			vertical-align: middle;
-		}
+		}*/
 
 		.feature .content {
 			display: inline-block;
