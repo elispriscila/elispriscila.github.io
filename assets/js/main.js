@@ -62,22 +62,8 @@
 		video.classList.remove('hidden');
 		elem.children[0].src += "&autoplay=1";
 
-		//var image = elem.children[1];
-		//image.className += ' hidden';
-
-		//elem.children.remove(elem.children[1]);
-
 		elem.removeChild(elem.children[1]);
 
-		//$('').children('td').eq(1);
-
-		//$('.cover').removeClass('icon fa-play');
-		//$('.cover').addClass('hidden');
-		//$('.video').removeClass('hidden');
-
-
-		//var test =  $(".video");
-	   // $(".video")[0].src += "&autoplay=1";
 	    ev.preventDefault();
 
 	});
