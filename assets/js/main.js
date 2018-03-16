@@ -41,28 +41,39 @@
 	});
 
 	$(".image").hover(
-	  function () {
-	    $(this).addClass('icon fa-play');
+	  function (el) {
+		$(this).addClass('icon fa-play');
 	  },
 	  function () {
 	    $(this).removeClass('icon fa-play');
 	  }
 	);
 
-
 	$('.image').on('click', function(ev) {
 
 		var elem = ev.target;
 
-		elem.classList.remove('icon');
-		elem.classList.remove('fa-play');
+		if(elem.isPlaying) {
+			console.log(true)
+			elem.isPlaying = false;
+			elem.children[0].src += "&autoplay=0";
+//			window.location = elem.children[0].src;
+			window.open(elem.children[0].src, '_blank');
 
+		} else {
+			elem.classList.remove('icon');
+			elem.classList.remove('fa-play');
+	
+			var video = elem.children[0];
+			video.classList.remove('hidden');
+			elem.children[0].src += "&autoplay=1";
+	
 
-		var video = elem.children[0];
-		video.classList.remove('hidden');
-		elem.children[0].src += "&autoplay=1";
+			elem.isPlaying = true;
+			elem.removeChild(elem.children[1]);
+		}
 
-		elem.removeChild(elem.children[1]);
+		
 
 	    ev.preventDefault();
 
